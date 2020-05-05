@@ -14,3 +14,5 @@
 <!-- -->
 </dict>
 </plist>
+
+<!-- codesign -d --entitlements entitlements.xml SandboxEscape.app -f -s "Apple Development: wojciechregula.blog [redacted]" -->
