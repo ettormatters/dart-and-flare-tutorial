@@ -150,5 +150,87 @@ void main() {
     for (var i in listOfInts) '#$i'
   ];
   assert(listOfStrings[1] == '#1');
+  
+   // Sets : A set in Dart is an unordered collection of unique items.
+  var halogens = {'fluorine', 'chlorine', 'bromine', 'iodine', 'astatine'};
+  
+  var names = <String>{};
+  // Set<String> names = {}; // This works, too.
+  // var names = {}; // Creates a map, not a set.
+  
+  var elements = <String>{};
+  elements.add('fluorine');
+  elements.addAll(halogens);
+  
+  var elements = <String>{};
+  elements.add('fluorine');
+  elements.addAll(halogens);
+  assert(elements.length == 5);
+  
+  final constantSet = const {
+    'fluorine',
+    'chlorine',
+    'bromine',
+    'iodine',
+    'astatine',
+  };
+  // constantSet.add('helium'); // Uncommenting this causes an error.
+  
+  // Maps : In general, a map is an object that associates keys and values.
+  var gifts = {
+    // Key:    Value
+    'first': 'partridge',
+    'second': 'turtledoves',
+    'fifth': 'golden rings'
+  };
+
+  var nobleGases = {
+    2: 'helium',
+    10: 'neon',
+    18: 'argon',
+  };
+  
+   var gifts = Map();
+    gifts['first'] = 'partridge';
+    gifts['second'] = 'turtledoves';
+    gifts['fifth'] = 'golden rings';
+
+    var nobleGases = Map();
+    nobleGases[2] = 'helium';
+    nobleGases[10] = 'neon';
+    nobleGases[18] = 'argon';
+  
+  var gifts = {'first': 'partridge'};
+  gifts['fourth'] = 'calling birds'; // Add a key-value pair
+  
+  var gifts = {'first': 'partridge'};
+  assert(gifts['first'] == 'partridge');
+  
+  var gifts = {'first': 'partridge'};
+  assert(gifts['fifth'] == null);
+  
+  var gifts = {'first': 'partridge'};
+  gifts['fourth'] = 'calling birds';
+  assert(gifts.length == 2);
+  
+  final constantMap = const {
+    2: 'helium',
+    10: 'neon',
+    18: 'argon',
+  };
+
+  // constantMap[2] = 'Helium'; // Uncommenting this causes an error.
+  
+  // Runes and grapheme clusters
+  //import 'package:characters/characters.dart';
+
+  var hi = 'Hi 🇩🇰';
+  print(hi);
+  print('The end of the string: ${hi.substring(hi.length - 1)}');
+  print('The last character: ${hi.characters.last}\n');
+  
+  // Symbols
+  #radix
+  #bar
 }
 
